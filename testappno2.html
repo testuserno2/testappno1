@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+	<style>
+		body {
+		background:linear-gradient(skyblue,powderblue,skyblue,powderblue);
+	background-size:100% 33em;
+	}
+
+	.kite 
+	{ 
+	position: relative ; 
+	width: 200px; 
+	height: 200px; 
+	background: gold; 
+	transform: rotate(45deg); 
+	margin: 0px auto; 
+	margin-top: 50px; 
+	animation: fly 5s ease-in-out infinite;
+
+	} 
+	.kite:before, .kite:after 
+	{ 
+	content: ''; 
+	position: absolute;
+	 } 
+	 .kite:before
+	  {
+	  top: 50%; 
+	  left: -20.5%; 
+	  width: 141%; 
+	  margin-top:-1px; 
+	  border-top: 2px solid #000; 
+	 transform: rotate(45deg); 
+	 } 
+	 .kite:after
+	 { 
+	 top: 0;
+	  left: 0; 
+	 width: 198px; 
+	 height: 198px; 
+	 border-top-left-radius: 100%;
+	  border-left: 2px solid #000;
+	  border-top: 2px solid #000; 
+	  } 
+	  .tail
+	 {
+	  position: absolute;
+	  top: 199px;
+	 left: 199px;
+	 width:60px;
+	 height:60px;
+	  overflow:hidden; 
+	 } 
+	 .tail:before
+	 {
+	  content:''; 
+	  display:block;
+	   width:141%; 
+	   height:100%; 
+	   background:red;
+	   transform-origin:0 100%;
+		transform:rotate(-45deg);
+	   
+	  }
+
+	p{
+		
+		top:-200px;
+	}
+
+
+	@keyframes fly {
+		0% , 100% {
+			top: 0%;
+			right: 0%;
+		}
+		20% {
+			top: -20%;
+			right: 5%;
+		}
+		40% {
+			top: -15%;
+			right: 10%;
+		}
+		60% {
+			top: -10%;
+			right: 5%;
+		}
+		80%{
+			top:-5%;
+			right:10%;
+		}
+	}
+	</style>
+    <body>
+        <div class="kite"><span class="tail"></span> </div>
+ 
+
+    </body>
+</html>
